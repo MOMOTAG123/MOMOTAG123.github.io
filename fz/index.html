@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>清欢反诈中心阻断通知</title>
+    <style>
+      body {
+        background-image: url(https://zha.fanzha.cloud/1.webp);
+        background-size: cover;
+        background-position: center;
+        background-color: #f5f5f5;
+        color: #a0a0ff;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        text-align: left;
+      }
+      .notification {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 50px 30px;
+        margin-top: 50px;
+      }
+      .notification h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .notification p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+      .reasons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+      .reasons h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-left: 2px solid#09ffa9;
+        padding-left: 8px;
+      }
+      .reasons p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .contact-form {
+        background-color: #d9e4ff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .contact-form h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .contact-form p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+      .contact-form input[type="submit"] {
+        background-color: #fff;
+        color: #488bff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-form input[type="submit"]:hover {
+        background-color: #488bff;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        .notification {
+          padding: 30px;
+        }
+        .reasons {
+          flex-direction: column;
+        }
+        .reasons h4,
+        .reasons p {
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="notification">
+        <h2 class="animate-fade">该网站已被清欢反诈中心阻断</h2>
+        <p class="animate-fade">亲爱的用户，您好：</p>
+        <p class="animate-fade">很遗憾，该网站已被阻断，可能因为：</p>
+        <div class="reasons">
+          <div class="reason">
+            <h4 class="animate-fade">原因一</h4>
+            <p class="animate-fade">网站内容违法，需要调整。</p>
+          </div>
+          <div class="reason">
+            <h4 class="animate-fade">原因二</h4>
+            <p class="animate-fade">网站涉及不适宜内容，需要调整。</p>
+          </div>
+          <div class="reason">
+            <h4 class="animate-fade">原因三</h4>
+            <p class="animate-fade">网站信息更新需要时间，稍等片刻。</p>
+          </div>
+          <div class="reason">
+            <h4 class="animate-fade">原因四</h4>
+            <p class="animate-fade">网站可能未申请白名单，正在努力解决中。</p>
+            <h4 class="animate-fade">申诉方法</h4>
+            <p class="animate-fade">
+              如站长发现网站存在以上问题，请及时解决。解决后请联系清欢反诈中心(邮箱):qinghuany@foxmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 class="animate-fade">联系我们</h3>
+        <p class="animate-fade">
+          如果您有任何疑问或需要进一步的帮助，请通过以下方式联系我们：
+        </p>
+        <form>
+          <input type="submit" value="发送消息" class="animate-fade" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
