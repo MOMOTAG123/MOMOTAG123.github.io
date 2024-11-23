@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <title>洛达科技官网</title>
+  <style>
+    *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header{
+  z-index: 999;
+  display: flex;
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  width:100%;
+  justify-content: space-between;
+  padding: 15px 200px;
+  transition: 0.5s ease ;
+  align-items: center;
+}
+
+.brand{
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease ;
+}
+
+header .navigation .navigation-items a::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+section{
+  padding: 100px 200px;
+}
+
+
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2696E9;
+}
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position:absolute;
+  top: 0;
+  left: 0;
+  background: rgba(3,96,251,0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.home .content{
+   z-index: 888;
+   color: #fff;
+   width: 70%;
+   margin-top: 50px;
+   display: none;
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+.home .content h1 span{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p{
+  margin-bottom: 65px;
+}
+
+.home .content a{
+  background: #fff;
+  padding: 15px 35px;
+  color: #1680ac;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.home .media-icons {
+  z-index: 888;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 30px;
+  transition: 0.5s ease;
+  justify-content: space-between;
+  gap:20px
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+} 
+
+.home .media-icons a:hover{
+  transform: scale(1.2);
+}
+
+
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+  gap:20px
+  
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255,255,255,0.5);
+  transition: 0.3 ease; 
+}
+
+.slider-navigation .nav-btn.active{
+  background: #2696E9;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform:scale(1.2)
+}
+
+
+.video-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(2.9% at 0 50%);
+}
+
+.video-slide.active{
+  clip-path: circle(150.0% at 0 50%);
+  transition: 0.5s ease;
+}
+
+
+
+@media  (max-width:1040px) {
+  header{
+    padding:  12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+  .home .media-icons {
+    right: 15px;
+
+  }
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh ;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1,1,1,0.5);
+  }
+
+  header .navigation .navigation-items a::before{
+    background-color: rgb(0, 0, 0);
+    height: 5px;
+  }
+  
+
+  header .navigation.active .navigation-items {
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0,5px 25px rgb(1, 1, 1)
+   }
+
+ 
+
+  header .navigation .navigation-items a{
+    color: #000;
+    font-size: 1.2em;
+    margin: 20px;
+ }
+
+  .menu-btn{
+    background: url(./images/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3 ease;
+  }
+  .menu-btn.active{
+    z-index: 999;
+    background: url(./images/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3 ease
+
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="./" class="brand">洛达科技工作室</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="./">主页</a>
+        <a href="about.html" >关于我们</a>
+        <a href="morefunction.html" >更多功能</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Up4671D6xmF3U6BHYUym7tJp-nlC43hV&authKey=7VR1QUMw7LQQ1CYfQt5CHc3momsY105%2BUjJhivKDED5uGF4A8saRfaXoOE0gb9sY&noverify=0&group_code=916575826" >洛达云计算</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=eRFforcK-JcKxqWiB0jfBLI4wBpKGiz3&authKey=dw7z54j6zkDxNhgfNAFgr2PBQI0E1lGiXgNmTAqk6WmaUeRAokKijwrjYwKewBz5&noverify=0&group_code=835108343" >xhalo云(赞助方)</a>
+      </div>
+    </div>
+  </header>
+  <section class="home">
+    <video  class="video-slide active" src="/mp4/home.mp4" autoplay muted loop></video>
+    <video  class="video-slide" src="/mp4/home2.mp4" autoplay muted loop></video>
+    <div class="content active">
+        <h1>用户<br><span>欢迎您!</span></h1>
+        <p>欢迎来到我们的官网,这里有你想要的,更多有趣,免费的云电脑,帮带您的求助,windows,linux,and,NAS等问题,都可以找我们解决</p>
+       <a href="https://qm.qq.com/cgi-bin/qm/qr?k=D16hxLS22HJWQwL1JFUvNma9JQDJYajr&jump_from=webapi&authKey=W6JbhsZFCQnwY1dRi0NR/Ga6AcumJcehNnbDtlNQ/SMmLgWKpgyiMmmfiasTnvfa"><img border="0" src="images/qq.png" alt="洛达科技" title="洛达云计算"></a>
+    </div>
+    <div class="content">
+      <h1>USER<br><span>GREET!</span></h1>
+      <p>Welcome to our official website, where you can find more interesting and free cloud computers to help you with your needs. You can find us to solve problems related to Windows, Linux, and NAS</p>
+<a href="https://qm.qq.com/cgi-bin/qm/qr?k=D16hxLS22HJWQwL1JFUvNma9JQDJYajr&jump_from=webapi&authKey=W6JbhsZFCQnwY1dRi0NR/Ga6AcumJcehNnbDtlNQ/SMmLgWKpgyiMmmfiasTnvfa"><img border="0" src="images/qq.png" alt="洛达科技" title="洛达云计算"></a>
+</div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>    
+    </div>
+  </section>   
+
+<script>
+ const menuBtn = document.querySelector(".menu-btn")
+ const navigation = document.querySelector(".navigation")
+
+ menuBtn.addEventListener("click",()=>{
+  menuBtn.classList.toggle("active");
+  navigation.classList.toggle("active");
+ });
+
+
+
+ const btns = document.querySelectorAll(".nav-btn")
+ const slides = document.querySelectorAll(".video-slide")
+ const contents = document.querySelectorAll(".content")
+
+ var sliderNav= function(manual){
+  btns.forEach((btn) => {
+    btn.classList.remove("active")
+
+  })
+
+  slides.forEach((slide) => {
+    slide.classList.remove("active")
+  })
+
+  contents.forEach((content) => {
+    content.classList.remove("active")
+  })
+
+  btns[manual].classList.add("active")
+  slides[manual].classList.add("active")
+  contents[manual].classList.add("active")
+
+ }
+
+ btns.forEach((btn,i)=>{
+    btn.addEventListener("click",()=>{
+      sliderNav(i)
+    })
+ });
+
+</script>
+</body>
+</html>
